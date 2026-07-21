@@ -1,11 +1,10 @@
 
 
-export const Footer = ({name, sentence}) => {
+export const Footer = () => {
     return (
       
       <footer>
-        <p>{name}</p>
-        <p>{sentence}</p>
+       <p>© 2026 React ile yapılmıştır. - Tüm Hakları Saklıdır.</p>
     </footer>
 
     );
