@@ -1,10 +1,18 @@
+import { User } from "../components/User";
+import { useEffect } from "react";
+import { useState } from "react";
+
+
+
 export const Home = () => {
+        
+    
     return (
        <>
-        <h2>Ana Sayfa</h2>
+        <h1>Ana Sayfa</h1>
        <p>Hoşgeldiniz</p>
-       <p></p>
-    
+       <User />
+       
        </>
-    );
-};
+    ); 
+};    

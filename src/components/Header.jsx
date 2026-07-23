@@ -8,10 +8,7 @@ export const Header = () => {
         
         <h1>
             <NavLink to="/">ZNZ-ZEYNEP NUR ZORBOZAN</NavLink>
-        </h1>
-
-    
-     
+        </h1> 
        
             <nav>
                  <ul>
@@ -24,7 +21,7 @@ export const Header = () => {
                     </li>
 
                     <li>
-                        <NavLink to = "/Content">İletişim</NavLink>
+                        <NavLink to = "/content">İletişim</NavLink>
                     </li>
                     
                     <li>
@@ -33,6 +30,14 @@ export const Header = () => {
 
                     <li>
                         <NavLink to = "/dashboard">Register</NavLink>
+                    </li>
+                    
+                    <li>
+                        <NavLink to = "/products">Products</NavLink>
+                    </li>
+
+                    <li>
+                        <NavLink to = "/cart">Cart</NavLink>
                     </li>
 
                 </ul>
