@@ -1,10 +1,17 @@
 import { useEffect, useState } from "react";
 import { getProducts } from "../service/productService";
+import { useDispatch } from "react-redux";
+import { addToCart } from "/src/app/cartSlice";
 
 export const Products = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
+
+  const dispatch = useDispatch();
+  const handleAdd = (product) => {
+    dispatch(addToCart(product));
+}
 
   useEffect(() => {
     const loadProducts = async () => {
@@ -68,7 +75,7 @@ export const Products = () => {
               {product.price}TL
             </p>
 
-            <button className="w-full mt-4 bg-blue-500 hover:bg-blue-600 text-white p-3 rounded-lg transition">
+            <button className="w-full mt-4 bg-blue-500 hover:bg-blue-600 text-white p-3 rounded-lg transition"  onClick={() => handleAdd(product)}>
               Sepete Ekle
             </button>
           </div>

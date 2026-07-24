@@ -1,27 +1,24 @@
-import { useState } from "react";
-import { useEffect } from "react";
 import { Footer } from "../components/Footer";
+import { useSelector } from "react-redux";
 
 export const Cart = () => {
 
-
-    const [count, setCount] = useState(0); 
-    
-    useEffect(() => {
-    console.log("Sepetteki ürün sayısı arttırıldı. : ", count )}, [count]);
-
+    const cart = useSelector((state) => state.cart);
 
     return (
-    <>   
-<h1>Sepetim</h1>
-<h3>{count}</h3>
-       <button onClick={() => setCount(count+1)}>
-       <button className="bg-green-600 hover:bg-blue-700 text-white px-1 py-1 rounded-xl transition">🛒 Sepetteki ürün sayısını arttır.</button>
-        </button>
-        <Footer />
-    </>
+        <>
+            <h1>Sepetim</h1>
+
+            <h3>Sepette {cart.length} ürün var</h3>
+
+            {cart.map((item) => (
+                <div key={item.id}>
+                    <h4>{item.title}</h4>
+                    <p>{item.price} ₺</p>
+                </div>
+            ))}
+
+            <Footer />
+        </>
     );
-
-
-
 };
