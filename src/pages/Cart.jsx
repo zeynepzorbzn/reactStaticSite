@@ -15,8 +15,8 @@ export const Cart = () => {
     <>   
 <h1>Sepetim</h1>
 <h3>{count}</h3>
-       <button onClick={() => setCount(count+1)}  >
-        Sepetteki ürün sayısını arttır.
+       <button onClick={() => setCount(count+1)}>
+       <button className="bg-green-600 hover:bg-blue-700 text-white px-1 py-1 rounded-xl transition">🛒 Sepetteki ürün sayısını arttır.</button>
         </button>
         <Footer />
     </>

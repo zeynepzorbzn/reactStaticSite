@@ -1,0 +1,36 @@
+/*
+import { configureStore } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
+
+
+export const store = configureStore( {
+
+
+reducer: {}
+
+
+});
+
+ dispatch(addToCart("Mouse"));
+
+const cartSlice = createSlice({
+    name: "cart",
+
+    initialState: [],
+
+    reducers: {
+        addToCart(state, action) {
+            state.push(action.payload);
+        }
+    }
+});
+
+  import { Provider } from "react-redux";
+import { store } from "./store";
+
+root.render(
+    <Provider store={store}>
+        <App />
+    </Provider>
+);
+*/

@@ -6,12 +6,18 @@ export const  MainLayout = () => {
 
     return(
         <>
-          <Header />
-          <main>
-                <Outlet />
-             </main>
-          
-          <Footer />
+          <div className="min-h-screen bg-slate-100">
+
+<Header />
+
+<main className="max-w-7xl mx-auto p-8">
+
+    <Outlet />
+</main>
+
+<Footer />
+
+</div>
         
         </>
     );

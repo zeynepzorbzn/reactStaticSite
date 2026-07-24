@@ -1,9 +1,10 @@
 import { MainLayout } from "./layouts/MainLayout";
-import { Routes, Route } from "react-router-dom"
+import { Routes, Route } from "react-router-dom";
+
 
 import { Home } from "./pages/Home";
 import { About } from "./pages/About";
-import { Content } from "./pages/Content";
+import { Contact } from "./pages/Contact";
 import { Login } from "./pages/Login";
 import { ProtectedRoute} from "./routes/ProtectedRoute";
 import { Dashboard } from "./pages/Dashboard";
@@ -14,11 +15,13 @@ import { Cart } from "./pages/Cart";
 export const App = () => {
 
     return (
-        <Routes>
+        <>
+        
+        <Routes> 
         <Route element = {<MainLayout />}>
             <Route path = "/" element ={<Home/>} />
             <Route path = "/about"element = {<About/>}/>
-            <Route path ="/content" element = {<Content/>}/>
+            <Route path ="/contact" element = {<Contact/>}/>
         </Route>
         <Route path="/login" element={<Login />} />
         <Route element={<ProtectedRoute />}>
@@ -28,5 +31,6 @@ export const App = () => {
         <Route path ="/products" element= {<Products/>}/>
         <Route path ="/cart" element= {<Cart/>}/>
         </Routes>
+        </>
     );
 };

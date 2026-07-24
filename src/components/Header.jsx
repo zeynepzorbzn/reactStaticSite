@@ -1,47 +1,63 @@
-import { NavLink } from "react-router-dom";
-
+import { Link } from "react-router-dom";
 
 export const Header = () => {
-    return (
-        
-    <header>
-        
-        <h1>
-            <NavLink to="/">ZNZ-ZEYNEP NUR ZORBOZAN</NavLink>
-        </h1> 
+  return (
+    <header className="bg-white shadow-md">
+      <div className="max-w-7xl mx-auto flex justify-between items-center px-8 py-4">
+
        
-            <nav>
-                 <ul>
-                    <li>
-                        <NavLink to ="/">Ana Sayfa</NavLink>
-                    </li>
-                    
-                    <li>
-                        <NavLink to = "/about">Hakkımızda</NavLink>
-                    </li>
+        <h1 className="text-2xl font-bold text-blue-600">
+          🛒 ZNZ Store
+        </h1>
 
-                    <li>
-                        <NavLink to = "/content">İletişim</NavLink>
-                    </li>
-                    
-                    <li>
-                        <NavLink to = "/dashboard">Login</NavLink>
-                    </li>
+        
+        <nav className="flex gap-8 font-medium">
 
-                    <li>
-                        <NavLink to = "/dashboard">Register</NavLink>
-                    </li>
-                    
-                    <li>
-                        <NavLink to = "/products">Products</NavLink>
-                    </li>
+          <Link className="hover:text-blue-600 transition" to="/">
+            Ana Sayfa
+          </Link>
 
-                    <li>
-                        <NavLink to = "/cart">Cart</NavLink>
-                    </li>
+          <Link className="hover:text-blue-600 transition" to="/products">
+            Ürünler
+          </Link>
 
-                </ul>
-            </nav>
+          <Link className="hover:text-blue-600 transition" to="/about">
+            Hakkımızda
+          </Link>
+
+          <Link className="hover:text-blue-600 transition" to="/contact">
+            İletişim
+          </Link>
+
+        </nav>
+
+       
+        <div className="flex gap-3">
+
+          <Link
+            to="/login"
+            className="px-5 py-2 rounded-lg border border-blue-600 text-blue-600 hover:bg-blue-50 transition"
+          >
+            Login
+          </Link>
+
+          <Link
+            to="/register"
+            className="px-5 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition"
+          >
+            Register
+          </Link>
+
+          <Link
+            to="/cart"
+            className="px-5 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition"
+          >
+            Sepetim
+          </Link>
+
+        </div>
+
+      </div>
     </header>
-    );
+  );
 };
